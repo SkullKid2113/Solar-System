@@ -1,4 +1,4 @@
-import { data } from "../data/data";
+import { data } from '../data/data';
 
 // SPACE DATA SAMPLE EXERCISE 0
 // Return the name of the first Planet in the array
@@ -10,8 +10,6 @@ export function getFirstPlanetName(data) {
   //console.log(planets);
   return planets[0].name;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-0"
