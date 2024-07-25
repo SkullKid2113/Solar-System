@@ -5,15 +5,9 @@ import { data } from '../data/data';
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetsNamesWithMoons(data) {
-  const planetsWithMoons = data.planets
-    .filter(function (planet) {
-      return planet.moons && planet.moons.length > 0;
-    })
-    .map(function (planet) {
-      return planet.name;
-    });
-
-  return planetsWithMoons;
+  return data.planets
+    .filter((planet) => planet.moonsCount > 0)
+    .map((planet) => planet.name);
 }
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"
