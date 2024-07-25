@@ -1,14 +1,19 @@
-import { data } from "../data/data";
+import { data } from '../data/data';
 
 // SPACE DATA EXERCISE 14
 // Return the sum of orbital periods of all asteroids
 // Return example: 234234.234
 
 export function getOrbitalPeriodsSum(data) {
-  // Your code goes here...
+  const orbitalPeriods = data.asteroids.filter(function (asteroid) {
+    return asteroid.orbitalPeriod !== undefined;
+  });
+  const orbitalPeriodsSum = orbitalPeriods.reduce(function (sum, asteroid) {
+    return sum + asteroid.orbitalPeriod;
+  }, 0);
+
+  return orbitalPeriodsSum;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-14"
